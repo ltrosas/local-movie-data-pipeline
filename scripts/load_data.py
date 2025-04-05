@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-DB_USER = os.getenv("DB_USER", "ltrosas")
+DB_USER = os.getenv("DB_USER")  # will raise error if not set!!!
 DB_PASS = os.getenv("DB_PASS")  # will raise error if not set!!!
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "5432")
