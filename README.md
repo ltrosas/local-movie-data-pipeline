@@ -1,2 +1,2 @@
 # local-movie-data-pipeline
-A simple local ETL pipeline using PostgreSQL, dbt, and Python
+just a really simple etl with a local postgreSQL db, dbt and airflow
