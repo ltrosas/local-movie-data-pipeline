@@ -173,10 +173,11 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# --- Your project-specific stuff ---
+# local-movie-data-pipeline
 .env
 .envrc
 *.db
 *.log
 venv/
 .dbt/
+.DS_Store
