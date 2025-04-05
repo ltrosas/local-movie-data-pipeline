@@ -182,3 +182,5 @@ venv/
 .dbt/
 .DS_Store
 .DS_Store
+.env
+.vscode/
