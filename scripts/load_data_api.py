@@ -15,7 +15,17 @@ DB_NAME = os.getenv("DB_NAME")
 api_key = os.getenv("IMDB_API_KEY")
 
 # test movies
-movies = ["Inception", "The Matrix", "Interstellar"]
+movies = [
+    "Inception",
+    "The Matrix",
+    "Interstellar",
+    "Scott Pilgrim vs. the World",
+    "Guardians of the Galaxy Vol. 3",
+    "The Matrix",
+    "Star Wars: Episode V - The Empire Strikes Back",
+    "Avengers: Endgame",
+    "The Lord of the Rings: The Fellowship of the Ring",
+    "Inglourious Basterds"]
 
 movies_data = []
 
@@ -44,6 +54,6 @@ df = pd.DataFrame(movies_data)
 
 # load to db
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
-df.to_sql("movies_raw_api", engine, if_exists="replace", index=False)
+df.to_sql("movies_raw_api", engine, schema="raw", if_exists="replace", index=False)
 
 print("✅ sucessful")

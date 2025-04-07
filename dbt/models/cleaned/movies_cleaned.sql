@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with cleaned as (
   select
     id,
@@ -6,7 +8,6 @@ with cleaned as (
     cast(release_year as varchar) as release_year,
     rating
   from public.movies_raw
-  where genre = 'Sci-Fi'
 )
 
 select * from cleaned
